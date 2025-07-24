@@ -1,0 +1,54 @@
+/* Fond général sombre */
+.main-content {
+  background-color: #1f1f2e;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* En-tête du calendrier */
+.calendar-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background-color: #292940;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.calendar-controls h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+/* Boutons de navigation */
+.button-group button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #3a3a5d;
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button-group button:hover {
+  background-color: #50507a;
+}
+
+/* Appliquer aussi un fond sombre aux composants personnalisés */
+app-calendar {
+  display: block;
+  background-color: #2b2b40;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5
+  );
+}

@@ -1,0 +1,28 @@
+<div class="calendar-container">
+  <!-- En-têtes des jours de la semaine -->
+  <div class="calendar-header">
+    <div *ngFor="let day of weekdays" class="weekday">{{ day }}</div>
+  </div>
+
+  <!-- Grille des jours -->
+  <div class="calendar-grid">
+    <div *ngFor="let day of days" 
+         class="calendar-day" 
+         [ngClass]="{
+           'not-current-month': !day,
+           'today': day?.isToday
+         }">
+      <div *ngIf="day" class="day-number">{{ day.date | date:'d' }}</div>
+      
+      <!-- Afficher les événements -->
+      <div *ngIf="day" class="events">
+        <div *ngFor="let event of day.events" 
+             class="event" 
+             [style.backgroundColor]="event.color"
+             (click)="onEventClick(event, $event)">
+          {{ event.title }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
